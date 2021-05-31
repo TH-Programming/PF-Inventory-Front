@@ -2,14 +2,25 @@
 
 import React from 'react'
 import Logo from './Logo'
-import Login from './Login'
+import LoginForm from './LoginForm'
 
 export default function Header(props){
+
+
+    if (props.isLoggedIn){
     return(
         <div className="header">
             <Logo/>
             <h1> Mi PF Inventory</h1>
-            <Login/>
         </div>
     )
+    } else {
+        return(
+            <div className="header">
+            <Logo/>
+            <h1> Mi PF Inventory</h1>
+            <LoginForm/>
+        </div>
+        )
+    }
 }

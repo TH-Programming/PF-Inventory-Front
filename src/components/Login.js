@@ -1,21 +1,15 @@
 import React, {useState} from 'react'
+import LoginForm from './LoginForm';
 
 function Login(){
-    const [username, setUsername] = useState("")
-    const [password, setPassword] = useState("")
-
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        console.log(username);
-        console.log(password);
-    }
-
     return(
-        <form className="login-form" onSubmit={handleSubmit}>
-            <input type="text" placeholder="Username" value={username} onChange = {(e) => setUsername(e.target.value)}/><br/>
-            <input type="password" placeholder="Password" value={password} onChange = {(e) => setPassword(e.target.value)}/><br/>
-            <input type="submit" value="LogIn"/>
-        </form>
+        <>
+        <h2>Log In</h2>
+       <LoginForm/>
+        <p>
+            Please log in to use this application. If you do not have log in credentials please contact your Facilities Manager.
+        </p>
+        </>
     );
     
 }

@@ -2,6 +2,8 @@ import React from 'react'
 
 export default function Footer(){
     return(
-        <h1> Footer </h1>
+        <div className="footer">
+            <p> Created by Tyler Huffman for use by Impact Fitness.</p>
+        </div>
     )
 }
