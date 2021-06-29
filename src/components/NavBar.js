@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import TestButton from './TestButton'
 //import Button from './NavButton'
 
 export default function NavBar(props){
@@ -12,7 +13,7 @@ export default function NavBar(props){
             <Link to="/search">Search</Link>
             <p> placeholder </p>
             <p> placeholder </p>
-            <p> placeholder </p>
+            <TestButton/>
         </div>
         )
     } else {
