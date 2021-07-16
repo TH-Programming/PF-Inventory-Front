@@ -1,6 +1,6 @@
 import { React, useState } from 'react';
 
-const LoginForm = () => {
+const LoginForm = (props) => {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
 
@@ -24,13 +24,18 @@ const LoginForm = () => {
             localStorage.setItem("authorization", response.headers.get("Authorization"))
             return response.json()
         })
-        .then(data => console.log(data))
+        .then(data => {
+            props.setUser(data.data)
+            console.log(data)
+        })
     }
 
     return (
-            <form className="login-form" onSubmit={handleSubmit}>
-            <input type="text" placeholder="Email" value={email} onChange = {(e) => setEmail(e.target.value)}/><br/>
-            <input type="password" placeholder="Password" value={password} onChange = {(e) => setPassword(e.target.value)}/><br/>
+        <form className="login-form" onSubmit={handleSubmit}>
+            <input type="text" placeholder="Email" value={email} onChange = {(e) => setEmail(e.target.value)}/>
+                <br/>
+            <input type="password" placeholder="Password" value={password} onChange = {(e) => setPassword(e.target.value)}/>
+                <br/>
             <input type="submit" value="LogIn"/>
         </form>
     );

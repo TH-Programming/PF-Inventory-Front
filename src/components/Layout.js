@@ -4,19 +4,12 @@ import Footer from "./Footer";
 import NavBar from './NavBar';
 
 const Layout = (props) => {
-    //! test variables
-const val = true
-const currentUser = {
-    "id": 1,
-    "userName": "Tyler",
-    "role": "Tech"
-}
 
     return (
         <>
-          <Header/>
+          <Header currentUser = {props.currentUser} setUser = {props.setUser}/>
           <div className = "page-container">
-            <NavBar isLoggedIn = {val} currentUser={currentUser}/>
+            <NavBar currentUser = {props.currentUser} setUser = {props.setUser}/>
             <div className = "container">
             {props.children}
             </div>

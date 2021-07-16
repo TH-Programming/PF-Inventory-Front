@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Home = () => {
+const HomeBody = () => {
     return (
         <div className = "container">
             <p> Welcome to MI-PF Inventory. Please login to continue.</p>
@@ -9,4 +9,4 @@ const Home = () => {
     );
 }
 
-export default Home;
+export default HomeBody;

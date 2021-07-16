@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TestButton = () => {
+const TestButton = (props) => {
 
     function executeTest(e) {
         e.preventDefault()
@@ -13,7 +13,7 @@ const TestButton = () => {
             }
         })
         .then(resp => resp.json())
-        .then(data => console.log(data))
+        .then(props.setUser(null))
     }
 
 
